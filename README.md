@@ -88,9 +88,9 @@ Esta separación permite claridad, mantenibilidad y escalabilidad del código.
 
 \- Visual Studio 2022 o superior (Windows Forms).  
 
-\- .NET 6.0 (o la versión que uses en tu proyecto).  
+\- .NET 8.0
 
-\- SQL Server (por ejemplo, SQL Server Express) instalado y accesible.  
+\- SQL Server o SQL Server Express instalado y accesible.  
 
 \- Cadena de conexión configurada en `App.config` bajo la clave `"cn"`.  
 
