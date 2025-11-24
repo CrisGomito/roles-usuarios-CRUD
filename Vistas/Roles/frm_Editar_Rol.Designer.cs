@@ -44,7 +44,7 @@
             // 
             // txt_Nombre
             // 
-            txt_Nombre.Location = new Point(54, 60);
+            txt_Nombre.Location = new Point(54, 92);
             txt_Nombre.MaxLength = 50;
             txt_Nombre.Name = "txt_Nombre";
             txt_Nombre.Size = new Size(277, 32);
@@ -56,13 +56,13 @@
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             label1.Location = new Point(105, 11);
             label1.Name = "label1";
-            label1.Size = new Size(165, 25);
+            label1.Size = new Size(118, 25);
             label1.TabIndex = 0;
             label1.Text = "EDITAR ROL";
             // 
             // txt_Descripcion
             // 
-            txt_Descripcion.Location = new Point(54, 148);
+            txt_Descripcion.Location = new Point(54, 154);
             txt_Descripcion.MaxLength = 250;
             txt_Descripcion.Multiline = true;
             txt_Descripcion.Name = "txt_Descripcion";
@@ -72,11 +72,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(54, 92);
+            label2.Location = new Point(54, 60);
             label2.Name = "label2";
-            label2.Size = new Size(70, 25);
+            label2.Size = new Size(89, 25);
             label2.TabIndex = 1;
-            label2.Text = "Nombre";
+            label2.Text = "Nombre*";
             // 
             // chb_Estados
             // 

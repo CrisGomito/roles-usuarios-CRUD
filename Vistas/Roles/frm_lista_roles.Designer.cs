@@ -50,9 +50,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label1.Location = new Point(339, 23);
+            label1.Location = new Point(275, 25);
             label1.Name = "label1";
-            label1.Size = new Size(220, 25);
+            label1.Size = new Size(252, 25);
             label1.TabIndex = 2;
             label1.Text = "Centro de Control de Roles";
             // 
@@ -92,14 +92,14 @@
             lst_Lista_Roles.ItemHeight = 25;
             lst_Lista_Roles.Location = new Point(140, 77);
             lst_Lista_Roles.Name = "lst_Lista_Roles";
-            lst_Lista_Roles.Size = new Size(768, 354);
+            lst_Lista_Roles.Size = new Size(538, 354);
             lst_Lista_Roles.TabIndex = 6;
             // 
             // frm_lista_roles
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(922, 462);
+            ClientSize = new Size(728, 462);
             Controls.Add(lst_Lista_Roles);
             Controls.Add(btn_Salir);
             Controls.Add(btn_Eliminar);

@@ -45,6 +45,8 @@
             txt_Correos = new TextBox();
             txt_Contrasenias = new TextBox();
             panel2 = new Panel();
+            label7 = new Label();
+            cb_Rol = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -64,9 +66,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(52, 67);
             label2.Name = "label2";
-            label2.Size = new Size(71, 25);
+            label2.Size = new Size(79, 25);
             label2.TabIndex = 1;
-            label2.Text = "Cédula";
+            label2.Text = "Cédula*";
             // 
             // panel1
             // 
@@ -75,7 +77,7 @@
             panel1.Controls.Add(btn_Guardar);
             panel1.Location = new Point(2, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(138, 446);
+            panel1.Size = new Size(138, 456);
             panel1.TabIndex = 2;
             // 
             // btn_Salir
@@ -111,7 +113,7 @@
             // chb_Estados
             // 
             chb_Estados.AutoSize = true;
-            chb_Estados.Location = new Point(54, 383);
+            chb_Estados.Location = new Point(244, 403);
             chb_Estados.Name = "chb_Estados";
             chb_Estados.Size = new Size(87, 29);
             chb_Estados.TabIndex = 6;
@@ -123,36 +125,36 @@
             label3.AutoSize = true;
             label3.Location = new Point(54, 130);
             label3.Name = "label3";
-            label3.Size = new Size(89, 25);
+            label3.Size = new Size(97, 25);
             label3.TabIndex = 4;
-            label3.Text = "Nombres";
+            label3.Text = "Nombres*";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(54, 191);
             label4.Name = "label4";
-            label4.Size = new Size(90, 25);
+            label4.Size = new Size(98, 25);
             label4.TabIndex = 5;
-            label4.Text = "Apellidos";
+            label4.Text = "Apellidos*";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(54, 254);
             label5.Name = "label5";
-            label5.Size = new Size(70, 25);
+            label5.Size = new Size(78, 25);
             label5.TabIndex = 6;
-            label5.Text = "Correo";
+            label5.Text = "Correo*";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(54, 317);
             label6.Name = "label6";
-            label6.Size = new Size(108, 25);
+            label6.Size = new Size(116, 25);
             label6.TabIndex = 7;
-            label6.Text = "Contraseña";
+            label6.Text = "Contraseña*";
             // 
             // txt_Cedulas
             // 
@@ -197,6 +199,8 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(cb_Rol);
             panel2.Controls.Add(txt_Contrasenias);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(txt_Correos);
@@ -211,21 +215,39 @@
             panel2.Controls.Add(label3);
             panel2.Location = new Point(132, -2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(399, 446);
+            panel2.Size = new Size(399, 456);
             panel2.TabIndex = 13;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(54, 404);
+            label7.Name = "label7";
+            label7.Size = new Size(38, 25);
+            label7.TabIndex = 11;
+            label7.Text = "Rol";
+            // 
+            // cb_Rol
+            // 
+            cb_Rol.FormattingEnabled = true;
+            cb_Rol.Location = new Point(98, 401);
+            cb_Rol.Name = "cb_Rol";
+            cb_Rol.Size = new Size(121, 33);
+            cb_Rol.TabIndex = 10;
             // 
             // frm_Insertar_Usuario
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(533, 444);
+            ClientSize = new Size(533, 454);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Font = new Font("Segoe UI", 14F);
             Margin = new Padding(5);
             Name = "frm_Insertar_Usuario";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "frm_Insertar_Usuario";
+            Text = "Insertar Usuario";
+            Load += frm_Insertar_Usuario_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -251,5 +273,7 @@
         private TextBox txt_Correos;
         private TextBox txt_Contrasenias;
         private Panel panel2;
+        private Label label7;
+        private ComboBox cb_Rol;
     }
 }

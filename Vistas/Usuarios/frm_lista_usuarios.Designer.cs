@@ -50,7 +50,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label1.Location = new Point(339, 23);
+            label1.Location = new Point(259, 23);
             label1.Name = "label1";
             label1.Size = new Size(282, 25);
             label1.TabIndex = 2;
@@ -92,14 +92,14 @@
             lst_Lista_Usuarios.ItemHeight = 25;
             lst_Lista_Usuarios.Location = new Point(140, 77);
             lst_Lista_Usuarios.Name = "lst_Lista_Usuarios";
-            lst_Lista_Usuarios.Size = new Size(768, 354);
+            lst_Lista_Usuarios.Size = new Size(538, 354);
             lst_Lista_Usuarios.TabIndex = 6;
             // 
             // frm_lista_usuarios
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(922, 462);
+            ClientSize = new Size(728, 462);
             Controls.Add(lst_Lista_Usuarios);
             Controls.Add(btn_Salir);
             Controls.Add(btn_Eliminar);

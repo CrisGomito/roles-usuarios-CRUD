@@ -11,7 +11,7 @@ namespace CRUD_Semana5.Controladores
         private readonly Conexion _cn = new Conexion();
 
 
-        // Login con ADO.NET parametrizado (compara contrasenia en texto o hash segun tu implementación)
+        // Login con ADO.NET parametrizado compara contrasenia en texto
         public Usuario_Model login2(Login_Model login)
         {
             if (login == null || string.IsNullOrWhiteSpace(login.Correo_Usuario) || string.IsNullOrWhiteSpace(login.Contrasenia))
@@ -34,7 +34,7 @@ namespace CRUD_Semana5.Controladores
 
                         var hashedOrPlain = lector["Contrasenia"].ToString();
 
-                        // Si usas hashing (recomendado), compara con el hash
+                        //si usáramos hash, compararíamos con el hash
                         // Aquí se asume contraseña en texto para pruebas:
                         if (hashedOrPlain == login.Contrasenia)
                         {

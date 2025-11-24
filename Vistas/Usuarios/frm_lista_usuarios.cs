@@ -23,25 +23,25 @@ namespace CRUD_Semana5.Vistas.Usuarios
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (lst_Lista_Usuarios.SelectedIndex != 0)
-                if (MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?", "Confirmar eliminación", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (lst_Lista_Usuarios.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un usuario para eliminar.");
+                return;
+            }
+            if (MessageBox.Show("¿Está seguro de eliminar el usuario seleccionado?", "Confirmar eliminación", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                int id_usuario = (int)lst_Lista_Usuarios.SelectedValue;
+                var resultado = _usuarios.Eliminar(id_usuario);
+                if (!resultado.ok)
                 {
-                    int id_usuario = (int)lst_Lista_Usuarios.SelectedValue;
-                    var eliminar_usuario = _usuarios.Eliminar(id_usuario);
-                    if (!eliminar_usuario.ok)
-                    {
-                        MessageBox.Show("Error al eliminar el usuario: " + eliminar_usuario.error);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario eliminado correctamente.");
-                        cargar_lista();
-                    }
+                    MessageBox.Show("Error al eliminar el usuario: " + resultado.error);
                 }
                 else
                 {
-                    MessageBox.Show("Seleccione un usuario para eliminar.");
+                    MessageBox.Show("Usuario eliminado correctamente.");
+                    cargar_lista();
                 }
+            }
         }
 
         private void btn_Salir_Click(object sender, EventArgs e)

@@ -71,8 +71,10 @@
             button1 = new Button();
             toolStripContainer1 = new ToolStripContainer();
             toolStripContainer2 = new ToolStripContainer();
+            panelContenedor = new Panel();
             menuStrip1.SuspendLayout();
             toolStripContainer1.SuspendLayout();
+            toolStripContainer2.ContentPanel.SuspendLayout();
             toolStripContainer2.TopToolStripPanel.SuspendLayout();
             toolStripContainer2.SuspendLayout();
             SuspendLayout();
@@ -85,7 +87,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(9, 3, 0, 3);
-            menuStrip1.Size = new Size(822, 29);
+            menuStrip1.Size = new Size(769, 29);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -374,11 +376,12 @@
             // 
             // toolStripContainer2.ContentPanel
             // 
-            toolStripContainer2.ContentPanel.Size = new Size(822, 559);
+            toolStripContainer2.ContentPanel.Controls.Add(panelContenedor);
+            toolStripContainer2.ContentPanel.Size = new Size(769, 512);
             toolStripContainer2.Dock = DockStyle.Fill;
             toolStripContainer2.Location = new Point(0, 0);
             toolStripContainer2.Name = "toolStripContainer2";
-            toolStripContainer2.Size = new Size(822, 588);
+            toolStripContainer2.Size = new Size(769, 541);
             toolStripContainer2.TabIndex = 3;
             toolStripContainer2.Text = "toolStripContainer2";
             // 
@@ -386,11 +389,20 @@
             // 
             toolStripContainer2.TopToolStripPanel.Controls.Add(menuStrip1);
             // 
+            // panelContenedor
+            // 
+            panelContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelContenedor.AutoSize = true;
+            panelContenedor.Location = new Point(3, -4);
+            panelContenedor.Name = "panelContenedor";
+            panelContenedor.Size = new Size(766, 513);
+            panelContenedor.TabIndex = 0;
+            // 
             // frm_dashboard
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(822, 588);
+            ClientSize = new Size(769, 541);
             Controls.Add(toolStripContainer2);
             Controls.Add(toolStripContainer1);
             Controls.Add(button1);
@@ -405,6 +417,8 @@
             menuStrip1.PerformLayout();
             toolStripContainer1.ResumeLayout(false);
             toolStripContainer1.PerformLayout();
+            toolStripContainer2.ContentPanel.ResumeLayout(false);
+            toolStripContainer2.ContentPanel.PerformLayout();
             toolStripContainer2.TopToolStripPanel.ResumeLayout(false);
             toolStripContainer2.TopToolStripPanel.PerformLayout();
             toolStripContainer2.ResumeLayout(false);
@@ -414,6 +428,7 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel ContentPanel;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem archivoToolStripMenuItem;
         private ToolStripMenuItem nuevoToolStripMenuItem;
@@ -457,5 +472,6 @@
         private ToolStripMenuItem agregarRolesToolStripMenuItem;
         private ToolStripMenuItem editarRolesToolStripMenuItem;
         private ToolStripMenuItem eliminarRolesToolStripMenuItem;
+        private Panel panelContenedor;
     }
 }

@@ -1,6 +1,8 @@
 ﻿
+using CRUD_Semana5.Config;
 using CRUD_Semana5.Controladores;
 using CRUD_Semana5.Modelos;
+using CRUD_Semana5.Vistas.Dashboard;
 
 namespace CRUD_Semana5.Vistas.Usuarios
 {
@@ -19,6 +21,8 @@ namespace CRUD_Semana5.Vistas.Usuarios
 
         private void frm_Editar_Usuario_Load(object sender, EventArgs e)
         {
+            CargarRoles();
+
             Usuario_Model usuario_Model = new Usuario_Model();
             usuario_Model = _usuarios_controller.ObtenerPorId(_id);
 
@@ -28,6 +32,7 @@ namespace CRUD_Semana5.Vistas.Usuarios
             txt_Correos.Text = usuario_Model.Correo_Usuario;
             txt_Contrasenias.Text = usuario_Model.Contrasenia;
             chb_Estados.Checked = usuario_Model.Estado;
+            cb_Rol.SelectedValue = usuario_Model.Id_Rol;
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
@@ -35,6 +40,16 @@ namespace CRUD_Semana5.Vistas.Usuarios
             if (!validaciones())
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.");
+                return;
+            }
+            var correo = txt_Correos.Text.Trim();
+            bool ok = System.Text.RegularExpressions.Regex.IsMatch(correo,
+                 @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+                 System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            if (!ok)
+            {
+                MessageBox.Show("El correo no tiene el formato correcto", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_Correos.Focus();
                 return;
             }
             var usuario_model = new Usuario_Model
@@ -45,7 +60,8 @@ namespace CRUD_Semana5.Vistas.Usuarios
                 Correo_Usuario = txt_Correos.Text.Trim(),
                 Contrasenia = txt_Contrasenias.Text.Trim(),
                 Estado = chb_Estados.Checked == true,
-                Id_Usuario = _id
+                Id_Usuario = _id,
+                Id_Rol = (int?)cb_Rol.SelectedValue
             };
             var nuevo_usuario = _usuarios_controller.Actualizar(usuario_model);
             if (!nuevo_usuario.ok)
@@ -56,9 +72,22 @@ namespace CRUD_Semana5.Vistas.Usuarios
             {
                 MessageBox.Show("Usuario editado correctamente.");
                 limpiarcajas();
-                var frm_lista = new frm_lista_usuarios();
-                frm_lista.Show();
-                this.Close();
+                frm_dashboard.CargarVistaEnPanel(new frm_lista_usuarios());
+                this.Hide();
+                this.Dispose();
+            }
+        }
+        private void CargarRoles()
+        {
+            using (var db = new sqlServer_dbcontext())
+            {
+                var roles = db.Roles
+                              .Select(r => new { r.Id_Rol, r.Nombre_Rol })
+                              .ToList();
+
+                cb_Rol.DataSource = roles;
+                cb_Rol.DisplayMember = "Nombre_Rol";
+                cb_Rol.ValueMember = "Id_Rol";
             }
         }
         public void limpiarcajas()
@@ -90,7 +119,10 @@ namespace CRUD_Semana5.Vistas.Usuarios
 
         private void btn_Salir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            limpiarcajas();
+            frm_dashboard.CargarVistaEnPanel(new frm_lista_usuarios());
+            this.Hide();
+            this.Dispose();
         }
     }
 }

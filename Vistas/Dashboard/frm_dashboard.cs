@@ -6,16 +6,18 @@ namespace CRUD_Semana5.Vistas.Dashboard
 
     public partial class frm_dashboard : Form
     {
+        public static Panel PanelContenedorGlobal;
         private frm_login _login;
         public frm_dashboard(frm_login login)
         {
             InitializeComponent();
             _login = login;
+            PanelContenedorGlobal = panelContenedor;
         }
         private void listaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm_lista_usuarios = new frm_lista_usuarios();
-            frm_lista_usuarios.ShowDialog();
+            frm_lista_usuarios vista = new frm_lista_usuarios();
+            CargarVistaEnPanel(vista);
         }
 
         private void agregarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,8 +40,8 @@ namespace CRUD_Semana5.Vistas.Dashboard
 
         private void listaDeRolesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm_lista_roles = new frm_lista_roles();
-            frm_lista_roles.ShowDialog();
+            frm_lista_roles vista = new frm_lista_roles();
+            CargarVistaEnPanel(vista);
         }
 
         private void agregarRolesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,6 +65,20 @@ namespace CRUD_Semana5.Vistas.Dashboard
         private void frm_dashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
             _login.Show();
+        }
+
+        //método general para cargar formularios dentro del panel contenedor
+        public static void CargarVistaEnPanel(Form vista)
+        {
+            PanelContenedorGlobal.Controls.Clear();
+
+            //configuramos el formulario para funcionar como control
+            vista.TopLevel = false;
+            vista.FormBorderStyle = FormBorderStyle.None;
+            vista.Dock = DockStyle.Fill;
+
+            PanelContenedorGlobal.Controls.Add(vista); //agrega al panel
+            vista.Show();
         }
     }
 }

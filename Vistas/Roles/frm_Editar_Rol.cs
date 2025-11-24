@@ -63,8 +63,6 @@ namespace CRUD_Semana5.Vistas.Roles
             {
                 MessageBox.Show("Rol editado correctamente.");
                 limpiarcajas();
-                var frm_lista = new frm_lista_roles();
-                frm_lista.Show();
                 this.Close();
             }
         }

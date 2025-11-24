@@ -36,6 +36,7 @@ namespace CRUD_Semana5.Vistas.Roles
             {
                 MessageBox.Show("Rol insertado correctamente.");
                 limpiarcajas();
+                this.Close();
             }
         }
 

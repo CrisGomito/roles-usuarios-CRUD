@@ -6,7 +6,6 @@ namespace CRUD_Semana5.Controladores
 {
     public class Roles_Controller
     {
-        // Lista todos los roles
         public List<Rol_Model> Todos()
         {
             using (var db = new sqlServer_dbcontext())
@@ -15,7 +14,6 @@ namespace CRUD_Semana5.Controladores
             }
         }
 
-        // Obtener por id
         public Rol_Model ObtenerPorId(int id)
         {
             using (var db = new sqlServer_dbcontext())
@@ -42,7 +40,6 @@ namespace CRUD_Semana5.Controladores
             }
         }
 
-        // Actualizar
         public (bool ok, string error) Actualizar(Rol_Model rol)
         {
             if (rol == null || rol.Id_Rol == 0) return (false, "Rol inválido.");
@@ -59,7 +56,6 @@ namespace CRUD_Semana5.Controladores
             }
         }
 
-        // Eliminar (logico o fisico)
         public (bool ok, string error) Eliminar(int id)
         {
             if (id == 0) return (false, "Id inválido.");

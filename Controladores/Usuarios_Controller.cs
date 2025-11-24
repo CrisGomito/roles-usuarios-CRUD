@@ -73,7 +73,7 @@ namespace CRUD_Semana5.Controladores
                 exist.Apellido_Usuario = usuario.Apellido_Usuario;
                 exist.Cedula_Usuario = usuario.Cedula_Usuario;
                 exist.Estado = usuario.Estado;
-                // Solo actualizamos la contraseña si nos enviaron una (evitar sobreescribir si viene vacío)
+                // Solo actualizamos la contraseña si nos enviaron una, así evitamos sobreescribir si viene vacío
                 if (!string.IsNullOrWhiteSpace(usuario.Contrasenia))
                     exist.Contrasenia = usuario.Contrasenia;
                 exist.Correo_Usuario = usuario.Correo_Usuario;

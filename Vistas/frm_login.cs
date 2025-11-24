@@ -5,7 +5,6 @@ namespace CRUD_Semana5.Vistas
     using CRUD_Semana5.Vistas.Dashboard;
     using CRUD_Semana5.Controladores;
     using CRUD_Semana5.Modelos;
-    using System.Text.RegularExpressions;
     using System.Windows.Forms;
 
     public partial class frm_login : Form
@@ -56,7 +55,7 @@ namespace CRUD_Semana5.Vistas
             Usuario_Model usuario = _authController.login2(model);
             if (usuario != null)
             {
-                MessageBox.Show($"Inicio de sesión exitoso. Bienvenido {usuario.Nombre_Usuario} ({usuario.RolNombre})", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Bienvenido {usuario.RolNombre} {usuario.Nombre_Usuario}", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 var dash = new frm_dashboard(this);
                 dash.Show();
                 this.Hide();
