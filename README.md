@@ -1,8 +1,8 @@
 # Sistema CRUD de Usuarios y Roles  
 
-\*\*Proyecto:\*\* Usuarios y Roles (Windows Forms · EF Core)  
+**Proyecto:** Usuarios y Roles (Windows Forms · EF Core)  
 
-\*\*Repositorio:\*\* \[roles-usuarios-CRUD](https://github.com/CrisGomito/roles-usuarios-CRUD)  
+**Repositorio:** \[roles-usuarios-CRUD](https://github.com/CrisGomito/roles-usuarios-CRUD)  
 
 
 
@@ -116,9 +116,8 @@ Esta separación permite claridad, mantenibilidad y escalabilidad del código.
 
 
 
-## Video Código Explicación Rápida:
+## Video Explicativo Funcionalidad - Código
 
 
-
-https://uniandeseduec-my.sharepoint.com/:v:/g/personal/cristianpp17_uniandes_edu_ec/IQC5je7TyR2xQJ2Qbukx5ndPAeuI2XLjsP7Z4y-AtbsicXg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=TGYRFV
+https://bit.ly/49zulA1
 
