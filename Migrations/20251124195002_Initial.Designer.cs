@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUD_Semana5.Migrations
 {
     [DbContext(typeof(sqlServer_dbcontext))]
-    [Migration("20251124030108_Usuarios")]
-    partial class Usuarios
+    [Migration("20251124195002_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,12 +90,6 @@ namespace CRUD_Semana5.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("RolNombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombre_completo")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id_Usuario");
 

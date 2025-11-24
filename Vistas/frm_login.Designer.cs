@@ -52,7 +52,6 @@
             txt_Correo.Name = "txt_Correo";
             txt_Correo.Size = new Size(248, 32);
             txt_Correo.TabIndex = 2;
-            txt_Correo.Leave += txt_Correo_Leave;
             // 
             // txt_Contrasenia
             // 

@@ -88,12 +88,6 @@ namespace CRUD_Semana5.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("RolNombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombre_completo")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id_Usuario");
 
                     b.HasIndex("Id_Rol");

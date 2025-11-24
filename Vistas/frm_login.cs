@@ -78,20 +78,6 @@ namespace CRUD_Semana5.Vistas
             }
         }
 
-        private void txt_Correo_Leave(object sender, EventArgs e)
-        {
-            var correo = txt_Correo.Text.Trim();
-            if (string.IsNullOrEmpty(correo)) return;
-
-            bool ok = System.Text.RegularExpressions.Regex.IsMatch(correo,
-                 @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
-                 System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-            if (!ok)
-            {
-                MessageBox.Show("El correo no tiene el formato correcto", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_Correo.Focus();
-            }
-        }
         public void limpiarcajas()
         {
             txt_Correo.Text = "";

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CRUD_Semana5.Migrations
 {
     /// <inheritdoc />
-    public partial class Roles : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -40,9 +40,7 @@ namespace CRUD_Semana5.Migrations
                     Estado = table.Column<bool>(type: "bit", nullable: false),
                     Contrasenia = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Correo_Usuario = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    nombre_completo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Id_Rol = table.Column<int>(type: "int", nullable: true),
-                    RolNombre = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id_Rol = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
