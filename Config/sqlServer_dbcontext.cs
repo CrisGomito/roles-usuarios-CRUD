@@ -27,6 +27,7 @@ namespace CRUD_Semana5.Config
                 entity.HasKey(r => r.Id_Rol);
                 entity.Property(r => r.Nombre_Rol).HasMaxLength(50).IsRequired();
                 entity.Property(r => r.Descripcion).HasMaxLength(250);
+                entity.Property(r => r.Fecha_Creacion).HasDefaultValueSql("GETDATE()");
             });
 
             modelBuilder.Entity<Usuario_Model>(entity =>
@@ -36,6 +37,7 @@ namespace CRUD_Semana5.Config
                 entity.Property(u => u.Nombre_Usuario).HasMaxLength(50).IsRequired();
                 entity.Property(u => u.Apellido_Usuario).HasMaxLength(50).IsRequired();
                 entity.Property(u => u.Correo_Usuario).HasMaxLength(100).IsRequired();
+                entity.Property(u => u.Fecha_Ingreso).HasDefaultValueSql("GETDATE()");
                 entity.HasOne<Rol_Model>()
                       .WithMany()
                       .HasForeignKey(u => u.Id_Rol)
