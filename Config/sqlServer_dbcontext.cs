@@ -28,7 +28,7 @@ namespace CRUD_Semana5.Config
                 entity.Property(r => r.Nombre_Rol).HasMaxLength(50).IsRequired();
                 entity.Property(r => r.Descripcion).HasMaxLength(250);
                 entity.Property(r => r.Fecha_Creacion).HasDefaultValueSql("GETDATE()");
-            });
+            }); 
 
             modelBuilder.Entity<Usuario_Model>(entity =>
             {
