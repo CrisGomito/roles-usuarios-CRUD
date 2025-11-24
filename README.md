@@ -2,7 +2,7 @@
 
 
 
-\# Sistema CRUD de Usuarios y Roles  
+# Sistema CRUD de Usuarios y Roles  
 
 \*\*Proyecto:\*\* Usuarios y Roles (Windows Forms · EF Core)  
 
@@ -14,9 +14,9 @@
 
 
 
-\## 1. Descripción del proyecto  
+## 1. Descripción del proyecto  
 
-Esta aplicación WinForms en C# permite la gestión completa (CRUD: Crear, Leer, Actualizar, Eliminar) de \*\*Usuarios\*\* y \*\*Roles\*\*, mediante una arquitectura en capas (Modelo → Controlador → Vista) y el uso de EntityFrameworkCore para acceso a base de datos SQL Server.  
+Esta aplicación WinForms en C# permite la gestión completa (CRUD: Crear, Leer, Actualizar, Eliminar) de **Usuarios** y **Roles**, mediante una arquitectura en capas (Modelo → Controlador → Vista) y el uso de EntityFrameworkCore para acceso a base de datos SQL Server.  
 
 El objetivo es demostrar buenas prácticas de desarrollo: acceso parametrizado, separación de responsabilidades, validaciones en el formulario, uso de vistas consistentes y script de base de datos.
 
@@ -26,7 +26,7 @@ El objetivo es demostrar buenas prácticas de desarrollo: acceso parametrizado, 
 
 
 
-\## 2. Funcionalidades  
+## 2. Funcionalidades  
 
 \- Autenticación de usuario (login) con verificación de correo y contraseña.  
 
@@ -62,7 +62,7 @@ El objetivo es demostrar buenas prácticas de desarrollo: acceso parametrizado, 
 
 
 
-\## 3. Arquitectura y capas  
+## 3. Arquitectura y capas  
 
 La aplicación sigue una estructura por carpetas:  
 
@@ -88,7 +88,7 @@ Esta separación permite claridad, mantenibilidad y escalabilidad del código.
 
 
 
-\## 4. Requisitos de ambiente  
+## 4. Requisitos de ambiente  
 
 \- Visual Studio 2022 o superior (Windows Forms).  
 
@@ -106,7 +106,7 @@ Esta separación permite claridad, mantenibilidad y escalabilidad del código.
 
 
 
-\## 5. Instalación y configuración  
+## 5. Instalación y configuración  
 
 1\. Clona el repositorio:  
 
@@ -120,7 +120,7 @@ Esta separación permite claridad, mantenibilidad y escalabilidad del código.
 
 
 
-\## Video Código Explicación Rápida:
+## Video Código Explicación Rápida:
 
 
 
