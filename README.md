@@ -119,5 +119,5 @@ Esta separación permite claridad, mantenibilidad y escalabilidad del código.
 ## Video Explicativo Funcionalidad - Código
 
 
-https://bit.ly/49zulA1
+https://bit.ly/3XPLwGc
 
